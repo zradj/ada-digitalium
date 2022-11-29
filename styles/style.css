@@ -51,18 +51,26 @@ html {
 }
 
 body {
+    width: 100%;
     height: 100%;
     background: #f5f6fa;
     font-family: 'Lusitana', serif;
     font-size: 20px;
 }
 
-main {
-    /* 
-        Debugging code
-        TODO: Remove after debugging
-    */
-    height: 10000px;
+body.light-theme::before {
+    content: '';
+    position: absolute;
+    background-image: url('../media/website-background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    opacity: 0.3;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
 }
 
 h1 {
@@ -113,6 +121,11 @@ hr {
 
 .pb-100 {
     padding-bottom: 100px;
+}
+
+.pad-text {
+    padding-right: 0.1em;
+    padding-left: 0.1em;
 }
 
 .fz-16 {
@@ -226,7 +239,7 @@ hr {
     box-shadow: inset 0 0 0 0 var(--secondary);
     color: var(--secondary);
     transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
-    padding: 0 2px;
+    padding: 0 0.1em;
 }
 
 .link-inline:hover {
