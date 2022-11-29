@@ -43,12 +43,16 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-header {
+main {
     /* 
         Debugging code
         TODO: Remove after debugging
     */
     height: 10000px;
+}
+
+.pt-100 {
+    padding-top: 100px;
 }
 
 .flex {
@@ -75,12 +79,14 @@ header {
     height: 75px;
     margin: auto;
     border-bottom: 1px solid var(--primary-dark);
+    background-color: var(--primary-light);
     font-size: 20px;
+    z-index: 1;
 }
 
 .navbar-logo {
     margin: auto 0;
-    height: 50px;
+    height: 60px;
     border-radius: 8px;
 }
 
