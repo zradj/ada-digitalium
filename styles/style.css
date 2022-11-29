@@ -55,8 +55,16 @@ main {
     padding: 100px;
 }
 
+.relative {
+    position: relative;
+}
+
 .flex {
     display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 .flex-center {
@@ -73,6 +81,29 @@ main {
     flex-direction: row;
 }
 
+.btn {
+    display: block;
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-light {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-light);
+}
+
+.btn-light:hover {
+    color: var(--primary-dark);
+    background: var(--secondary-light);
+    border: 1px solid var(--primary-dark);
+}
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -80,7 +111,7 @@ main {
     margin: auto;
     border-bottom: 1px solid var(--primary-dark);
     background-color: var(--primary-light);
-    font-size: 20px;
+    font-size: 1.2rem;
     z-index: 1;
 }
 
@@ -98,21 +129,9 @@ main {
 }
 
 .navbar-link {
-    padding: 14px 16px;
+    display: flex;
     height: 100%;
-    border-radius: 10px;
     text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    color: var(--primary-dark);
-    font-weight: bold;
-    transition: background-color 0.5s ease-in-out;
-    cursor: pointer;
-}
-
-.navbar-link:hover {
-    color: var(--primary-dark);
-    background: var(--secondary-light);
 }
 
 .navbar-hr {
@@ -132,4 +151,30 @@ main {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: var(--primary-light);
+    min-width: 200px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 10px;
+    padding: 16px;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease;
+    margin-top: 1px;
+}
+
+.dropdown:hover > .btn-light {
+    color: var(--primary-dark);
+    background: var(--secondary-light);
+    border: 1px solid var(--primary-dark);
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
 }
