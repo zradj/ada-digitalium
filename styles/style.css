@@ -1,6 +1,7 @@
 :root {
     --primary: #f5f6fa;
     --secondary: #2d3436;
+    --dark-gray: #434950;
     --gray: #e7e7e7;
 }
 
@@ -46,8 +47,7 @@
 
 html {
     width: 100%;
-    height: 100%;
-    scroll-behavior: smooth;
+    height: 100%;;
 }
 
 body {
@@ -55,22 +55,7 @@ body {
     height: 100%;
     background: #f5f6fa;
     font-family: 'Lusitana', serif;
-    font-size: 20px;
-}
-
-body.light-theme::before {
-    content: '';
-    position: absolute;
-    background-image: url('../media/website-background.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    opacity: 0.3;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -1;
+    font-size: 20px;;
 }
 
 h1 {
@@ -81,8 +66,35 @@ hr {
     color: var(--secondary);
 }
 
+.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+.light-theme::before {
+    content: '';
+    position: absolute;
+    background-image: url('../media/website-background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    opacity: 0.4;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .w-100 {
     width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.overflow-scroll {
+    overflow: scroll;
 }
 
 .mb-20 {
@@ -265,7 +277,6 @@ hr {
     margin: auto 0;
     max-height: 60px;
     height: 60px;
-    border-radius: 8px;
     transition: max-height 0.25s ease-in;
 }
 
@@ -335,6 +346,37 @@ hr {
 .dropdown:hover > .btn-primary > .link-underline::before {
     transform-origin: left;
     transform: scaleX(1)
+}
+
+#back-to-top {
+    display: block;
+    position: fixed;
+    transform: translate(0, 200%);
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    outline: none;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease;
+    z-index: 1;
+}
+
+#back-to-top:hover {
+    background-color: var(--dark-gray);
+}
+
+#back-to-top::before {
+    content: '';
+    display: block;
+    width: 5em;
+    height: 5em;
+    background-image: url('../media/back-to-top.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(92%) sepia(7%) saturate(200%) hue-rotate(196deg) brightness(106%) contrast(96%);
 }
 
 @media screen and (min-width: 880px) {

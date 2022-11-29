@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/index.js"></script>
 </head>
-<body class="light-theme">
+<body class="light-theme scroll-smooth">
     <header>
         <nav id="navbar" class="navbar">
             <ul class="flex justify-content-evenly navbar-menu">
@@ -41,7 +41,7 @@
                 </li>
                 <hr class="navbar-hr">
                 <li>
-                    <img class="flex-center navbar-logo" src="media/team-logo.png" alt="Team 28's logo">
+                    <img class="br-15 flex-center navbar-logo" src="media/team-logo.png" alt="Team 28's logo">
                 </li>
                 <hr class="navbar-hr">
                 <li>
@@ -57,9 +57,9 @@
             </ul>
         </nav>
     </header>
-    <main class="pt-50">
+    <main class="pt-50 h-100 overflow-scroll scroll-smooth">
         <section id="the-team" class="mx-10vw mb-100 pt-80">
-            <h1 class="text-center mb-20"><span class="bg-secondary pad-text">The Team</span></h1>
+            <h1 class="text-center mb-20"><span class="br-15 bg-secondary pad-text">The Team</span></h1>
             <hr class="w-100 mb-20 border-dashed">
             <div class="flex justify-content-between">
                 <p class="info-paragraph text-justify mr-100">
@@ -80,11 +80,15 @@
                 </figure>
             </div>
         </section>
-        <section id="team-members" class="pt-80">
-            <h1 class="text-center mb-20"><span class="bg-secondary pad-text">Team Members</span></h1>
+        <section id="team-members" class="mx-10vw pt-80">
+            <h1 class="br-15 text-center mb-20"><span class="br-15 bg-secondary pad-text">Team Members</span></h1>
             <article id="zaur-rajabov">
-                <h2 class="text-center">Zaur Rajabov</h2>
-                <div class="w-100 flex justify-content-between"></div>
+                <div class="w-100 flex justify-content-between">
+                    <div>
+                        <h2>Zaur Rajabov</h2>
+                        <img src="media/team-members/Fikrat-Rustamli.jpg" alt="Zaur Rajabov">
+                    </div>
+                </div>
             </article>
         </section>
         <section id="hour-of-code"></section>
@@ -93,5 +97,6 @@
     <footer>
 
     </footer>
+    <button id="back-to-top"></button>
 </body>
 </html>
