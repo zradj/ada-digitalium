@@ -1,17 +1,17 @@
 :root {
-    --primary-dark: #2d3436;
-    --primary-light: #f5f6fa;
-    --secondary-light: #e7e7e7;
+    --primary: #f5f6fa;
+    --secondary: #2d3436;
+    --gray: #e7e7e7;
 }
 
 ::-moz-selection {
-    color: var(--primary-light);
-    background: var(--primary-dark);
+    color: var(--primary);
+    background: var(--secondary);
 }
 
 ::selection {
-    color: var(--primary-light);
-    background: var(--primary-dark);
+    color: var(--primary);
+    background: var(--secondary);
 }
 
 @font-face {
@@ -24,6 +24,18 @@
     font-family: 'Nunito';
     font-weight: bold;
     src: url('../fonts/Nunito-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Lusitana';
+    font-weight: normal;
+    src: url('../fonts/Lusitana-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lusitana';
+    font-weight: bold;
+    src: url('../fonts/Lusitana-Bold.ttf');
 }
 
 * {
@@ -40,7 +52,8 @@ html {
 body {
     height: 100%;
     background: #f5f6fa;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lusitana', serif;
+    font-size: 20px;
 }
 
 main {
@@ -51,8 +64,63 @@ main {
     height: 10000px;
 }
 
-.p-100 {
-    padding: 100px;
+h1 {
+    font-size: 3rem;
+}
+
+hr {
+    color: var(--secondary);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.ml-100 {
+    margin-left: 100px;
+}
+
+.mr-100 {
+    margin-right: 100px;
+}
+
+.my-10 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mx-10vw {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.py-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.fz-16 {
+    font-size: 16px;
+}
+
+.br-15 {
+    border-radius: 15px;
+}
+
+.border-dotted {
+    border: 2px dotted var(--secondary);
+}
+
+.border-dashed {
+    border: 1px dashed var(--secondary);
 }
 
 .relative {
@@ -77,8 +145,20 @@ main {
     justify-content: space-evenly;
 }
 
+.justify-content-between {
+    justify-content: space-between;
+}
+
 .flex-row {
     flex-direction: row;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 .btn {
@@ -92,16 +172,35 @@ main {
     cursor: pointer;
 }
 
-.btn-light {
-    background-color: var(--primary-light);
-    color: var(--primary-dark);
-    border: 1px solid var(--primary-light);
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--primary);
 }
 
-.btn-light:hover {
-    color: var(--primary-dark);
-    background: var(--secondary-light);
-    border: 1px solid var(--primary-dark);
+.btn-primary:hover {
+    color: var(--secondary);
+    background: var(--gray);
+    text-decoration: underline;
+    border: 1px solid var(--secondary);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.link-inline {
+    display: inline-block;
+    box-shadow: inset 0 0 0 0 var(--secondary);
+    color: var(--secondary);
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+    padding: 0 2px;
+}
+
+.link-inline:hover {
+    box-shadow: inset 200px 0 0 0 var(--secondary);
+    color: var(--primary);
 }
 
 .navbar {
@@ -109,8 +208,9 @@ main {
     width: 100%;
     height: 75px;
     margin: auto;
-    border-bottom: 1px solid var(--primary-dark);
-    background-color: var(--primary-light);
+    border-bottom: 1px solid var(--secondary);
+    background-color: var(--primary);
+    font-family: 'Nunito', sans-serif;
     font-size: 1.2rem;
     z-index: 1;
 }
@@ -135,10 +235,15 @@ main {
 }
 
 .navbar-hr {
+    display: none;
     min-width: 10px;
     width: 5vw;
-    color: var(--primary-dark);
-    border: 1px dashed var(--primary-dark);
+    color: var(--secondary);
+    border: 1px dashed var(--secondary);
+}
+
+.info-paragraph {
+    width: 700px;
 }
 
 .expand::after {
@@ -156,9 +261,9 @@ main {
 .dropdown-content {
     display: block;
     position: absolute;
-    background-color: var(--primary-light);
+    background-color: var(--primary);
     min-width: 200px;
-    border: 1px solid var(--primary-dark);
+    border: 1px solid var(--secondary);
     border-radius: 10px;
     padding: 16px;
     z-index: 2;
@@ -168,13 +273,20 @@ main {
     margin-top: 1px;
 }
 
-.dropdown:hover > .btn-light {
-    color: var(--primary-dark);
-    background: var(--secondary-light);
-    border: 1px solid var(--primary-dark);
+.dropdown:hover > .btn-primary {
+    color: var(--secondary);
+    background: var(--gray);
+    border: 1px solid var(--secondary);
+    text-decoration: underline;
 }
 
 .dropdown:hover .dropdown-content {
     visibility: visible;
     opacity: 1;
+}
+
+@media screen and (min-width: 880px) {
+    .navbar-hr {
+        display: block;
+    }
 }

@@ -7,36 +7,55 @@
     <title>Homework 3</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="light-theme">
     <header>
         <nav class="navbar">
             <ul class="flex justify-content-evenly navbar-menu">
-                <li><a class="btn btn-light flex-center navbar-link" href="#the-team">The Team</a></li>
+                <li><a class="btn btn-primary flex-center navbar-link" href="#the-team">The Team</a></li>
                 <li class="dropdown">
-                    <a class="btn btn-light flex flex-center justify-content-evenly navbar-link expand dropdown" href="#team-members">Team Members</a>
+                    <a class="btn btn-primary flex flex-center justify-content-evenly navbar-link expand dropdown" href="#team-members">Team Members</a>
                     <div class="dropdown-content">
                         <div class="flex flex-column">
-                            <a class="btn btn-light" href="#zaur-rajabov">Zaur Rajabov</a>
-                            <a class="btn btn-light" href="#said-jahangirov">Said Jahangirov</a>
-                            <a class="btn btn-light" href="#fikrat-rustamli">Fikrat Rustamli</a>
-                            <a class="btn btn-light" href="#samad-ganbarov">Samad Ganbarov</a>
+                            <a class="btn btn-primary my-10" href="#zaur-rajabov">Zaur Rajabov</a>
+                            <a class="btn btn-primary my-10" href="#said-jahangirov">Said Jahangirov</a>
+                            <a class="btn btn-primary my-10" href="#fikrat-rustamli">Fikrat Rustamli</a>
+                            <a class="btn btn-primary my-10" href="#samad-ganbarov">Samad Ganbarov</a>
                         </div>
                     </div>
                 </li>
                 <hr class="navbar-hr">
                 <li><img class="flex-center navbar-logo" src="media/team-logo.png" alt="Team 28's logo"></li>
                 <hr class="navbar-hr">
-                <li><a class="btn btn-light flex-center navbar-link" href="#hour-of-code">Hour of Code</a></li>
-                <li><a class="btn btn-light flex-center navbar-link" href="#the-project">The Project</a></li>
+                <li><a class="btn btn-primary flex-center navbar-link" href="#hour-of-code">Hour of Code</a></li>
+                <li><a class="btn btn-primary flex-center navbar-link" href="#the-project">The Project</a></li>
             </ul>
         </nav>
     </header>
-    <main class="p-100">
-        <section id="the-team">
-            <h1>The Team</h1>
+    <main class="py-100">
+        <section id="the-team" class="mx-10vw mb-100">
+            <h1 class="text-center mb-20"><span class="bg-secondary">The Team</span></h1>
+            <hr class="w-100 mb-20 border-dashed">
+            <div class="flex justify-content-between">
+                <p class="info-paragraph text-justify mr-100">
+                    Welcome to the website of <span class="bg-secondary">ADA Digitalium</span> (Team 28)!<br><br>
+                    ADA Digitalium is a team of four ADA students (<a class="link-inline" href="#zaur-rajabov">Zaur Rajabov</a>,
+                    <a class="link-inline" href="#said-jahangirov">Said Jahangirov</a>, <a class="link-inline" href="#fikrat-rustamli">Fikrat Rustamli</a>,
+                    <a class="link-inline" href="#samad-ganbarov">Samad Ganbarov</a>)
+                    who cooperate to solve problems and accomplish tasks for the Principles of Information Systems course.
+                    So far, we have organized an <a class="link-inline" href="#hour-of-code">Hour of Code event</a> in one of Baku schools.
+                    Making this website is another task we were assigned to do. We hope you'll like it as much as we did!<br><br>
+                    The website uses various technologies, starting from basic HTML/CSS to more complex ones, such as JavaScript.
+                    We would like to thank the authors of <a class="link-inline" href="https://www.codecademy.com/">Codecademy</a>, which was very helpful in providing us with the knowledge
+                    on how to use these technologies.
+                </p>
+                <figure class="ml-100">
+                    <img class="br-15 border-dotted" width="750" height="400" src="media/ADA-Campus.jpg" alt="ADA Campus from an aerial view">
+                    <figcaption class="fz-16">Author: ADA University. Source: <a class="link-inline" href="https://ceeus.ada.edu.az/">ceeus.ada.edu.az</a></figcaption>
+                </figure>
+            </div>
         </section>
         <section id="team-members">
-            <h2>Team Members</h2>
+            <h1 class="text-center"><span class="bg-secondary">Team Members</span></h1>
         </section>
         <section id="hour-of-code">
             <h2>Hour of Code</h2>
