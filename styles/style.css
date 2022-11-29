@@ -51,8 +51,8 @@ main {
     height: 10000px;
 }
 
-.pt-100 {
-    padding-top: 100px;
+.p-100 {
+    padding: 100px;
 }
 
 .flex {
@@ -120,4 +120,16 @@ main {
     width: 5vw;
     color: var(--primary-dark);
     border: 1px dashed var(--primary-dark);
+}
+
+.expand::after {
+    content: '';
+    display: block;
+    width: 1.25em;
+    height: 1.25em;
+    margin-left: 5px;
+    background-image: url('../media/expand.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
