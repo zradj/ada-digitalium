@@ -1,9 +1,9 @@
 const onScroll = () => {
   const navbar = document.getElementById('navbar');
   const backToTopButton = document.getElementById('back-to-top');
-  const main = document.querySelector('main');
+  const wrapper = document.getElementById('page-wrapper');
 
-  if (main.scrollTop > 75) {
+  if (wrapper.scrollTop > 75) {
     navbar.style.maxHeight = '60px';
     navbar.querySelector('.navbar-logo').style.maxHeight = '50px';
     backToTopButton.style.transform = 'translate(0)';
@@ -14,13 +14,14 @@ const onScroll = () => {
   }
 };
 
-const onClickBackToTop = () => (document.querySelector('main').scrollTop = 0);
+const onClickBackToTop = () => (document.getElementById('page-wrapper').scrollTop = 0);
 
 const onDOMContentLoaded = () => {
   const main = document.querySelector('main');
+  const wrapper = document.getElementById('page-wrapper');
   main.style.opacity = '1';
   onScroll();
-  main.onscroll = onScroll;
+  wrapper.onscroll = onScroll;
   document.getElementById('back-to-top').addEventListener('click', onClickBackToTop);
 };
 

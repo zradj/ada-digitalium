@@ -128,8 +128,16 @@ p {
     height: 100%;
 }
 
+.h-60 {
+    height: 60px;
+}
+
 .overflow-scroll {
     overflow: scroll;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 .mt-0 {
@@ -165,6 +173,10 @@ p {
 
 .pt-80 {
     padding-top: 80px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
 }
 
 .pb-100 {
@@ -318,18 +330,18 @@ p {
     transition: filter .5s ease-in-out;
 }
 
-.btn-primary {
+.btn-secondary-hover {
     background-color: var(--primary);
     color: var(--secondary);
     border: 1px solid var(--secondary);
 }
 
-.btn-primary:hover {
+.btn-secondary-hover:hover {
     background-color: var(--secondary);
     color: var(--primary);
 }
 
-.btn-primary.btn-open-link:hover::after {
+.btn-secondary-hover.btn-open-link:hover::after {
     filter: invert(92%) sepia(7%) saturate(200%) hue-rotate(196deg) brightness(106%) contrast(96%);
 }
 
@@ -424,18 +436,33 @@ p {
     color: var(--secondary);
 }
 
-.navbar {
+.navbar,
+.footer {
     position: fixed;
     width: 100%;
     max-height: 75px;
     height: 75px;
-    border-bottom: 1px solid var(--secondary);
     background-color: var(--primary);
     font-family: 'Nunito', sans-serif;
     font-size: 1.2rem;
     transition: max-height 0.4s ease-in-out;
     z-index: 1;
 }
+
+.navbar {
+    border-bottom: 1px solid var(--secondary);
+}
+
+
+.footer {
+    position: unset;
+    max-height: 75px;
+    border-top: 1px solid var(--secondary);
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 
 .navbar-menu {
     height: 100%;
@@ -557,6 +584,21 @@ p {
 
 .text-columns-secondary {
     column-rule: 2px solid var(--secondary);
+}
+
+#github-link {
+    padding: 5px;
+}
+
+#github-link::before {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 1em;
+    background-image: url('../media/GitHub.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #back-to-top {
