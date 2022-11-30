@@ -331,7 +331,7 @@ main {
     display: inline-block;
     box-shadow: inset 0 0 0 0 var(--secondary);
     color: var(--secondary);
-    transition: box-shadow .5s ease-in-out, color .5s ease-in-out;
+    transition: box-shadow .75s ease, color .75s ease;
     padding: 0 0.1em;
 }
 
