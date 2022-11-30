@@ -610,6 +610,10 @@ p {
     column-rule: 2px solid var(--secondary);
 }
 
+#page-wrapper {
+    overflow-y: scroll;
+}
+
 #github-link {
     padding: 5px;
 }
