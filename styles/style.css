@@ -71,6 +71,12 @@ main {
     transition: opacity 1s ease-in;
 }
 
+iframe {
+    display: block;
+    outline: none;
+    border: none;
+}
+
 .scroll-smooth {
     scroll-behavior: smooth;
 }
@@ -98,8 +104,16 @@ main {
     min-width: 300px;
 }
 
-.max-width-900 {
-    max-width: 700px;
+.max-width-100 {
+    max-width: 100%;
+}
+
+.max-width-600 {
+    max-width: 600px;
+}
+
+.h-auto {
+    height: auto;
 }
 
 .h-100 {
@@ -118,17 +132,14 @@ main {
     margin-bottom: 100px;
 }
 
-.ml-100 {
-    margin-left: 100px;
-}
-
-.mr-100 {
-    margin-right: 100px;
-}
-
 .my-10 {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mx-10vw {
@@ -146,6 +157,22 @@ main {
 
 .pb-100 {
     padding-bottom: 100px;
+}
+
+.pl-50 {
+    padding-left: 50px;
+}
+
+.pl-100 {
+    padding-left: 100px;
+}
+
+.pr-50 {
+    padding-right: 50px;
+}
+
+.pr-100 {
+    padding-right: 100px;
 }
 
 .py-20 {
@@ -170,20 +197,24 @@ main {
     text-transform: unset;
 }
 
-.bt-dashed {
+.bt-dashed-secondary {
     border-top: 1px dashed var(--secondary);
 }
 
-.bb-dashed {
+.bb-dashed-secondary {
     border-bottom: 1px dashed var(--secondary);
 }
 
-.bt-solid {
+.bt-solid-secondary {
     border-top: 1px solid var(--secondary);
 }
 
-.bb-solid {
+.bb-solid-secondary {
     border-bottom: 1px solid var(--secondary);
+}
+
+.bl-solid-primary {
+    border-left: 2px solid var(--primary);
 }
 
 .bt-none {
@@ -194,8 +225,12 @@ main {
     border-bottom: none;
 }
 
-.br-15 {
+.brad-15 {
     border-radius: 15px;
+}
+
+.border-2 {
+    border-width: 2px;
 }
 
 .border-dotted {
@@ -206,7 +241,11 @@ main {
     position: relative;
 }
 
-.flex {
+.top-30 {
+    top: 30px;
+}
+
+.d-flex {
     display: flex;
 }
 
@@ -251,7 +290,7 @@ main {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    transition: .5s ease;
+    transition: background-color .5s ease-in-out, border .5s ease-in-out;
     cursor: pointer;
 }
 
@@ -264,7 +303,7 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: .5s ease;
+    transition: filter .5s ease-in-out;
 }
 
 .btn-primary {
@@ -327,22 +366,50 @@ main {
     transform: scaleX(1)
 }
 
+.bg-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
 .bg-secondary {
     background-color: var(--secondary);
     color: var(--primary);
 }
 
+.bg-secondary ::-moz-selection {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.bg-secondary ::selection {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
 .link-inline {
     display: inline-block;
-    box-shadow: inset 0 0 0 0 var(--secondary);
-    color: var(--secondary);
-    transition: box-shadow .75s ease, color .75s ease;
+    transition: box-shadow .75s ease-in-out, color .5s ease-in-out;
     padding: 0 0.2em;
 }
 
-.link-inline:hover {
+.link-inline-primary {
+    box-shadow: inset 0 0 0 0 var(--secondary);
+    color: var(--secondary);
+}
+
+.link-inline-primary:hover {
     box-shadow: inset 100vw 0 0 0 var(--secondary);
     color: var(--primary);
+}
+
+.link-inline-secondary {
+    box-shadow: inset 0 0 0 0 var(--primary);
+    color: var(--primary);
+}
+
+.link-inline-secondary:hover {
+    box-shadow: inset 100vw 0 0 0 var(--primary);
+    color: var(--secondary);
 }
 
 .navbar {
@@ -462,6 +529,7 @@ main {
     border: none;
     outline: none;
     background-color: var(--secondary);
+    border: 1px solid var(--primary);
     border-radius: 50%;
     cursor: pointer;
     transition: 0.5s ease;
