@@ -144,6 +144,14 @@ p {
     margin-top: 0;
 }
 
+.mr-10 {
+    margin-right: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
 .mb-20 {
     margin-bottom: 20px;
 }
@@ -327,7 +335,19 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: filter .5s ease-in-out;
+    transition: filter .2s ease-in-out;
+}
+
+.btn-github::before {
+    content: '';
+    display: block;
+    width: 1.25em;
+    height: 1.25em;
+    background-image: url('../media/GitHub-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: filter .3s ease-in-out;
 }
 
 .btn-secondary-hover {
@@ -342,6 +362,10 @@ p {
 }
 
 .btn-secondary-hover.btn-open-link:hover::after {
+    filter: invert(92%) sepia(7%) saturate(200%) hue-rotate(196deg) brightness(106%) contrast(96%);
+}
+
+.btn-secondary-hover.btn-github:hover::before {
     filter: invert(92%) sepia(7%) saturate(200%) hue-rotate(196deg) brightness(106%) contrast(96%);
 }
 
