@@ -421,7 +421,7 @@ hr {
 .quote::before,
 .quote::after {
     position: absolute;
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Times New Roman', serif;
     font-size: 8rem;
     opacity: 0.25;
 }
