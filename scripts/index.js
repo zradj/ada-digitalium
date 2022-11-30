@@ -17,8 +17,10 @@ const onScroll = () => {
 const onClickBackToTop = () => (document.querySelector('main').scrollTop = 0);
 
 const onDOMContentLoaded = () => {
+  const main = document.querySelector('main');
+  main.style.opacity = '1';
   onScroll();
-  document.querySelector('main').onscroll = onScroll;
+  main.onscroll = onScroll;
   document.getElementById('back-to-top').addEventListener('click', onClickBackToTop);
 };
 
