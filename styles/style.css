@@ -159,8 +159,7 @@ main {
 }
 
 .pad-text {
-    padding-right: 0.1em;
-    padding-left: 0.1em;
+    padding: 0 0.3em;
 }
 
 .fz-16 {
@@ -171,21 +170,27 @@ main {
     text-transform: unset;
 }
 
-.border-content-dashed {
+.bt-dashed {
     border-top: 1px dashed var(--secondary);
+}
+
+.bb-dashed {
     border-bottom: 1px dashed var(--secondary);
 }
 
-.border-content-solid {
+.bt-solid {
     border-top: 1px solid var(--secondary);
+}
+
+.bb-solid {
     border-bottom: 1px solid var(--secondary);
 }
 
-.border-top-none {
+.bt-none {
     border-top: none;
 }
 
-.border-bottom-none {
+.bb-none {
     border-bottom: none;
 }
 
@@ -332,7 +337,7 @@ main {
     box-shadow: inset 0 0 0 0 var(--secondary);
     color: var(--secondary);
     transition: box-shadow .75s ease, color .75s ease;
-    padding: 0 0.1em;
+    padding: 0 0.2em;
 }
 
 .link-inline:hover {
