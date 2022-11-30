@@ -77,6 +77,10 @@ iframe {
     border: none;
 }
 
+p {
+    margin: 20px 0;
+}
+
 .scroll-smooth {
     scroll-behavior: smooth;
 }
@@ -112,6 +116,10 @@ iframe {
     max-width: 600px;
 }
 
+.max-width-1200 {
+    max-width: 1200px;
+}
+
 .h-auto {
     height: auto;
 }
@@ -122,6 +130,10 @@ iframe {
 
 .overflow-scroll {
     overflow: scroll;
+}
+
+.mt-0 {
+    margin-top: 0;
 }
 
 .mb-20 {
@@ -520,6 +532,18 @@ iframe {
     right: -75px;
 }
 
+.text-columns-2 {
+    column-count: 2;
+    column-span: none;
+    column-width: 400px;
+    column-gap: 50px;
+    column-rule: 2px solid var(--secondary);
+}
+
+.text-columns-secondary {
+    column-rule-color: var(--primary);
+}
+
 #back-to-top {
     display: block;
     position: fixed;
@@ -529,7 +553,7 @@ iframe {
     border: none;
     outline: none;
     background-color: var(--secondary);
-    border: 1px solid var(--primary);
+    box-shadow: var(--gray) 0px 0px 160px 0px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.5s ease;
