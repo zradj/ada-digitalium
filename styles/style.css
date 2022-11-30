@@ -382,7 +382,8 @@ main {
     min-width: 10px;
     width: 5vw;
     color: var(--secondary);
-    border: 1px dashed var(--secondary);
+    border: none;
+    border-top: 1px dashed var(--secondary);
 }
 
 .expand::after {
